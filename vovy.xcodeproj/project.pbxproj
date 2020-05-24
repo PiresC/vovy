@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		867D4B242474FB320064D0B8 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867D4B232474FB320064D0B8 /* HomePage.storyboard */; };
+		867D4B262474FB570064D0B8 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D4B252474FB570064D0B8 /* HomePageViewController.swift */; };
+		867D4B28247520030064D0B8 /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867D4B27247520030064D0B8 /* ProfileView.storyboard */; };
+		867D4B2A24752AA20064D0B8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D4B2924752AA20064D0B8 /* ProfileViewController.swift */; };
+		867D4B2F24753A160064D0B8 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867D4B2E24753A160064D0B8 /* EditProfile.storyboard */; };
+		867D4B3324753A4F0064D0B8 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D4B3224753A4F0064D0B8 /* EditProfileController.swift */; };
 		86F4820224655E7900F1B848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4820124655E7900F1B848 /* AppDelegate.swift */; };
 		86F4820424655E7900F1B848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4820324655E7900F1B848 /* SceneDelegate.swift */; };
 		86F4820624655E7900F1B848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4820524655E7900F1B848 /* ViewController.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		867D4B232474FB320064D0B8 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		867D4B252474FB570064D0B8 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		867D4B27247520030064D0B8 /* ProfileView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
+		867D4B2924752AA20064D0B8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		867D4B2E24753A160064D0B8 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
+		867D4B3224753A4F0064D0B8 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		86F481FE24655E7900F1B848 /* vovy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vovy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F4820124655E7900F1B848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86F4820324655E7900F1B848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		867D4B2C247532770064D0B8 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				867D4B252474FB570064D0B8 /* HomePageViewController.swift */,
+				867D4B232474FB320064D0B8 /* HomePage.storyboard */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
+		867D4B2D247532920064D0B8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				867D4B2924752AA20064D0B8 /* ProfileViewController.swift */,
+				867D4B27247520030064D0B8 /* ProfileView.storyboard */,
+				867D4B2E24753A160064D0B8 /* EditProfile.storyboard */,
+				867D4B3224753A4F0064D0B8 /* EditProfileController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		86F481F524655E7900F1B848 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +90,8 @@
 		86F4820024655E7900F1B848 /* vovy */ = {
 			isa = PBXGroup;
 			children = (
+				867D4B2D247532920064D0B8 /* Profile */,
+				867D4B2C247532770064D0B8 /* HomePage */,
 				86F4820124655E7900F1B848 /* AppDelegate.swift */,
 				86F4820324655E7900F1B848 /* SceneDelegate.swift */,
 				86F4820524655E7900F1B848 /* ViewController.swift */,
@@ -128,9 +162,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867D4B2F24753A160064D0B8 /* EditProfile.storyboard in Resources */,
+				867D4B242474FB320064D0B8 /* HomePage.storyboard in Resources */,
 				86F4821124655E7A00F1B848 /* LaunchScreen.storyboard in Resources */,
 				86F4820E24655E7A00F1B848 /* Assets.xcassets in Resources */,
 				86F4820924655E7900F1B848 /* Main.storyboard in Resources */,
+				867D4B28247520030064D0B8 /* ProfileView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867D4B2A24752AA20064D0B8 /* ProfileViewController.swift in Sources */,
 				86F4820624655E7900F1B848 /* ViewController.swift in Sources */,
+				867D4B3324753A4F0064D0B8 /* EditProfileController.swift in Sources */,
 				86F4820C24655E7900F1B848 /* vovy.xcdatamodeld in Sources */,
 				86F4820224655E7900F1B848 /* AppDelegate.swift in Sources */,
+				867D4B262474FB570064D0B8 /* HomePageViewController.swift in Sources */,
 				86F4820424655E7900F1B848 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
