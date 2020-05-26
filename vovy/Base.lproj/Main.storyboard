@@ -43,7 +43,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Lihat Semua"/>
                                 <connections>
-                                    <segue destination="Hot-N6-6fs" kind="show" id="qOR-KC-AUU"/>
+                                    <action selector="lihatSemuaKegiatan:" destination="ViL-hT-U4v" eventType="touchUpInside" id="Bp0-LF-BV8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKb-fS-feF">
@@ -83,10 +83,6 @@
                                         <size key="customSize" width="85" height="85"/>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="ViL-hT-U4v" id="bNW-KU-10t"/>
-                                    <outlet property="delegate" destination="ViL-hT-U4v" id="8k5-Ng-ThH"/>
-                                </connections>
                             </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="penuliseditor" translatesAutoresizingMaskIntoConstraints="NO" id="STY-JG-5ZM">
                                 <rect key="frame" x="20" y="186" width="374" height="242"/>
@@ -120,11 +116,11 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="ViL-hT-U4v" id="ngB-dJ-e1C"/>
-                                    <outlet property="delegate" destination="ViL-hT-U4v" id="frV-Jm-Kvc"/>
-                                </connections>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHQ-vh-fpL">
+                                <rect key="frame" x="20" y="494" width="364" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bHA-mu-6WV"/>
@@ -133,6 +129,9 @@
                     <connections>
                         <outlet property="KategoriCollectionView" destination="YIf-2c-A3N" id="7xA-vn-Y8b"/>
                         <outlet property="kegiatanCollectionView" destination="K0Z-3U-7Lc" id="dvD-me-o8P"/>
+                        <outlet property="loadingImage" destination="bHQ-vh-fpL" id="k9i-bo-l1y"/>
+                        <segue destination="PDq-re-6Ru" kind="show" identifier="toDetailKegiatan" id="psx-fY-pC0"/>
+                        <segue destination="Hot-N6-6fs" kind="show" identifier="toLihatSemuaKegiatan" id="vmJ-iv-rBZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Um-vd-Olu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -186,6 +185,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyU-nf-upV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="-17.410714285714285"/>
+        </scene>
+        <!--detailKegiatan-->
+        <scene sceneID="xF3-4b-Kse">
+            <objects>
+                <viewControllerPlaceholder storyboardName="detailKegiatan" id="PDq-re-6Ru" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="14p-RE-15O"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wR0-N6-qAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2499" y="-109"/>
         </scene>
     </scenes>
     <resources>

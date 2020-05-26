@@ -14,6 +14,10 @@
 		867D4B2F24753A160064D0B8 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867D4B2E24753A160064D0B8 /* EditProfile.storyboard */; };
 		867D4B3324753A4F0064D0B8 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D4B3224753A4F0064D0B8 /* EditProfileController.swift */; };
 		86853A35247D12CC009C6DB2 /* jsonStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86853A34247D12CC009C6DB2 /* jsonStruct.swift */; };
+		86853A37247D39A8009C6DB2 /* gifPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86853A36247D39A8009C6DB2 /* gifPlayer.swift */; };
+		86853A39247D43B8009C6DB2 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 86853A38247D43B8009C6DB2 /* loading.gif */; };
+		86853A3C247D5B0A009C6DB2 /* detailKegiatan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86853A3B247D5B0A009C6DB2 /* detailKegiatan.storyboard */; };
+		86853A3E247D5B2F009C6DB2 /* detialKegiatanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86853A3D247D5B2F009C6DB2 /* detialKegiatanViewController.swift */; };
 		86B13FFD247BA51800512B51 /* homeKategoriCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B13FFB247BA51800512B51 /* homeKategoriCollectionView.swift */; };
 		86B13FFE247BA51800512B51 /* homeKategoriCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B13FFC247BA51800512B51 /* homeKategoriCollectionView.xib */; };
 		86B14001247BEE7900512B51 /* lihatSemuaKategori.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B14000247BEE7900512B51 /* lihatSemuaKategori.storyboard */; };
@@ -41,6 +45,10 @@
 		867D4B2E24753A160064D0B8 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		867D4B3224753A4F0064D0B8 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		86853A34247D12CC009C6DB2 /* jsonStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonStruct.swift; sourceTree = "<group>"; };
+		86853A36247D39A8009C6DB2 /* gifPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifPlayer.swift; sourceTree = "<group>"; };
+		86853A38247D43B8009C6DB2 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../../Desktop/loading.gif; sourceTree = "<group>"; };
+		86853A3B247D5B0A009C6DB2 /* detailKegiatan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = detailKegiatan.storyboard; sourceTree = "<group>"; };
+		86853A3D247D5B2F009C6DB2 /* detialKegiatanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detialKegiatanViewController.swift; sourceTree = "<group>"; };
 		86B13FFB247BA51800512B51 /* homeKategoriCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeKategoriCollectionView.swift; sourceTree = "<group>"; };
 		86B13FFC247BA51800512B51 /* homeKategoriCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeKategoriCollectionView.xib; sourceTree = "<group>"; };
 		86B14000247BEE7900512B51 /* lihatSemuaKategori.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = lihatSemuaKategori.storyboard; sourceTree = "<group>"; };
@@ -99,8 +107,18 @@
 			isa = PBXGroup;
 			children = (
 				86853A34247D12CC009C6DB2 /* jsonStruct.swift */,
+				86853A36247D39A8009C6DB2 /* gifPlayer.swift */,
 			);
 			path = KumpulanStruct;
+			sourceTree = "<group>";
+		};
+		86853A3A247D5AED009C6DB2 /* detailKegiatan */ = {
+			isa = PBXGroup;
+			children = (
+				86853A3B247D5B0A009C6DB2 /* detailKegiatan.storyboard */,
+				86853A3D247D5B2F009C6DB2 /* detialKegiatanViewController.swift */,
+			);
+			name = detailKegiatan;
 			sourceTree = "<group>";
 		};
 		86B13FFF247BEE5B00512B51 /* LihatSemua */ = {
@@ -137,6 +155,7 @@
 		86F4820024655E7900F1B848 /* vovy */ = {
 			isa = PBXGroup;
 			children = (
+				86853A3A247D5AED009C6DB2 /* detailKegiatan */,
 				86853A33247D127E009C6DB2 /* KumpulanStruct */,
 				86B13FFF247BEE5B00512B51 /* LihatSemua */,
 				867D4B2D247532920064D0B8 /* Profile */,
@@ -147,6 +166,7 @@
 				86F4820724655E7900F1B848 /* Main.storyboard */,
 				86F4820D24655E7A00F1B848 /* Assets.xcassets */,
 				86F4820F24655E7A00F1B848 /* LaunchScreen.storyboard */,
+				86853A38247D43B8009C6DB2 /* loading.gif */,
 				86F4821224655E7A00F1B848 /* Info.plist */,
 				86F4820A24655E7900F1B848 /* vovy.xcdatamodeld */,
 			);
@@ -217,9 +237,11 @@
 				86F4821124655E7A00F1B848 /* LaunchScreen.storyboard in Resources */,
 				86B13FFE247BA51800512B51 /* homeKategoriCollectionView.xib in Resources */,
 				86B1400D247C06C100512B51 /* lihatSemuaKegiatan.storyboard in Resources */,
+				86853A3C247D5B0A009C6DB2 /* detailKegiatan.storyboard in Resources */,
 				86F4820E24655E7A00F1B848 /* Assets.xcassets in Resources */,
 				86B14013247C074300512B51 /* lihatSemuaKegiatanCell.xib in Resources */,
 				86F4820924655E7900F1B848 /* Main.storyboard in Resources */,
+				86853A39247D43B8009C6DB2 /* loading.gif in Resources */,
 				867D4B28247520030064D0B8 /* ProfileView.storyboard in Resources */,
 				86B14001247BEE7900512B51 /* lihatSemuaKategori.storyboard in Resources */,
 			);
@@ -239,8 +261,10 @@
 				86B14012247C074300512B51 /* lihatSemuaKegiatanCell.swift in Sources */,
 				86B13FFD247BA51800512B51 /* homeKategoriCollectionView.swift in Sources */,
 				867D4B3324753A4F0064D0B8 /* EditProfileController.swift in Sources */,
+				86853A37247D39A8009C6DB2 /* gifPlayer.swift in Sources */,
 				86F4820C24655E7900F1B848 /* vovy.xcdatamodeld in Sources */,
 				86B1400A247BFB4100512B51 /* lihatSemuaKategoriCell.swift in Sources */,
+				86853A3E247D5B2F009C6DB2 /* detialKegiatanViewController.swift in Sources */,
 				86853A35247D12CC009C6DB2 /* jsonStruct.swift in Sources */,
 				86F4820224655E7900F1B848 /* AppDelegate.swift in Sources */,
 				867D4B262474FB570064D0B8 /* HomePageViewController.swift in Sources */,

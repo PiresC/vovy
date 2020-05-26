@@ -10,12 +10,16 @@ import UIKit
 
 class lihatSemuaKategoriViewController: ViewController {
     @IBOutlet weak var allKategori: UICollectionView!
+    @IBOutlet weak var lihatSemua: UIButton!
     
     
     let kategori = ["Sosialisasi", "Translator", "Teknologi", "Penulis", "Administrasi", "Desain", "Riset", "Manajemen", "Pelatihan"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lihatSemua.layer.cornerRadius = 10
+        lihatSemua.layer.masksToBounds = true
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize (width: 95, height: 140)
@@ -29,13 +33,22 @@ class lihatSemuaKategoriViewController: ViewController {
         self.title = "Semua Kategori"
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? lihatSemuaKegiatanViewController {
+            destination.query = sender as? String
+        }
+    }
+    @IBAction func lihatSemuaKegiatan(_ sender: Any) {
+        performSegue(withIdentifier: "toSemuaKegiatan", sender: "")
+    }
+    
 }
 
 extension lihatSemuaKategoriViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        print("press this image indexpath-\(indexPath )")
+        performSegue(withIdentifier: "toSemuaKegiatan", sender: kategori[indexPath.row])
     }
 }
 
