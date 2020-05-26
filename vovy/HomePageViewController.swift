@@ -12,26 +12,48 @@ import UIKit
 class HomePageViewController: UIViewController {
     
     let kategori = ["Sosialisasi", "Translator", "Teknologi", "Penulis", "Administrasi", "Desain", "Riset", "Manajemen", "Pelatihan"]
+    var res: readJson?
+    let urljson = URL(string: "https://mc2-be.herokuapp.com/activities")
+    
 
     @IBOutlet weak var KategoriCollectionView: UICollectionView!
     @IBOutlet weak var kegiatanCollectionView: UICollectionView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loadJson()
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize (width: 90, height: 140)
-        layout.scrollDirection = .horizontal
-        KategoriCollectionView.collectionViewLayout = layout
-        
-        KategoriCollectionView.delegate = self
-        KategoriCollectionView.dataSource = self
-        
-        kegiatanCollectionView.dataSource = self
-        kegiatanCollectionView.delegate = self
-        
         setupCollection()
+        /*
+        let layout = UICollectionViewFlowLayout()
+         layout.itemSize = CGSize (width: 90, height: 140)
+         layout.scrollDirection = .horizontal
+         KategoriCollectionView.collectionViewLayout = layout
+     */
+    }
+    
+    func loadJson() {
+        DispatchQueue.global().async {
+            let dataTask = URLSession.shared.dataTask(with: self.urljson!) { data,_,_ in
+                    let jsonData = data
+                    
+                    do {
+                        self.res = try JSONDecoder().decode(readJson.self, from: jsonData!)
+                        DispatchQueue.main.async {
+                            self.setupCollection()
+                            self.kegiatanCollectionView.reloadData()
+                        }
+                        
+                    } catch let error {
+                        print(error)
+                    }
+            }
+            dataTask.resume()
+        }
     }
     
     func setupCollection() {
@@ -73,9 +95,9 @@ extension HomePageViewController: UICollectionViewDataSource {
             
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: lihatSemuaKegiatanCell.identifier , for: indexPath) as!lihatSemuaKegiatanCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: lihatSemuaKegiatanCell.identifier , for: indexPath) as! lihatSemuaKegiatanCell
             
-            cell.configure(with:  UIImage(named: kategori[indexPath.row])!, namaKegiatan: "Fundraising Team Thirst Project Jakarta", organisasi: "Indorelawan")
+            cell.configure(with:  UIImage(named: self.kategori[indexPath.row])!, namaKegiatan: "self.res!.data[indexPath.row].title", organisasi: "self.res!.data[indexPath.row].source")
             
             return cell
         }
