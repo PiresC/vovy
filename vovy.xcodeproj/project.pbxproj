@@ -14,6 +14,13 @@
 		86F4820C24655E7900F1B848 /* vovy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86F4820A24655E7900F1B848 /* vovy.xcdatamodeld */; };
 		86F4820E24655E7A00F1B848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F4820D24655E7A00F1B848 /* Assets.xcassets */; };
 		86F4821124655E7A00F1B848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F4820F24655E7A00F1B848 /* LaunchScreen.storyboard */; };
+		9A7E5021247627DA00AAC556 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E5020247627DA00AAC556 /* QuizViewController.swift */; };
+		9AD45041247CD47200087DC7 /* BoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD45040247CD47200087DC7 /* BoardingViewController.swift */; };
+		9AD45045247CD56400087DC7 /* BoardingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD45047247CD56400087DC7 /* BoardingStoryboard.storyboard */; };
+		9AD4504D247D5D6800087DC7 /* AwalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4504C247D5D6800087DC7 /* AwalViewController.swift */; };
+		9AD4504E247D5D7C00087DC7 /* AwalStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD45050247D5D7C00087DC7 /* AwalStoryboard.storyboard */; };
+		9AE3CCD024762CF300E9386E /* QuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE3CCD224762CF300E9386E /* QuizStoryboard.storyboard */; };
+		9AE3CCD6247632D200E9386E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE3CCD5247632D200E9386E /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		86F4820D24655E7A00F1B848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86F4821024655E7A00F1B848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86F4821224655E7A00F1B848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A7E5020247627DA00AAC556 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		9AD45040247CD47200087DC7 /* BoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingViewController.swift; sourceTree = "<group>"; };
+		9AD45046247CD56400087DC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BoardingStoryboard.storyboard; sourceTree = "<group>"; };
+		9AD4504C247D5D6800087DC7 /* AwalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwalViewController.swift; sourceTree = "<group>"; };
+		9AD4504F247D5D7C00087DC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AwalStoryboard.storyboard; sourceTree = "<group>"; };
+		9AE3CCD124762CF300E9386E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QuizStoryboard.storyboard; sourceTree = "<group>"; };
+		9AE3CCD5247632D200E9386E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +74,53 @@
 			children = (
 				86F4820124655E7900F1B848 /* AppDelegate.swift */,
 				86F4820324655E7900F1B848 /* SceneDelegate.swift */,
-				86F4820524655E7900F1B848 /* ViewController.swift */,
-				86F4820724655E7900F1B848 /* Main.storyboard */,
 				86F4820D24655E7A00F1B848 /* Assets.xcassets */,
+				9AD45048247CD8D600087DC7 /* Main Group */,
+				9AD45044247CD4A200087DC7 /* Boarding Group */,
+				9AD4503E247CD43300087DC7 /* Quiz Group */,
+				9AD4504B247D5CE400087DC7 /* Awal Group */,
 				86F4820F24655E7A00F1B848 /* LaunchScreen.storyboard */,
 				86F4821224655E7A00F1B848 /* Info.plist */,
 				86F4820A24655E7900F1B848 /* vovy.xcdatamodeld */,
 			);
 			path = vovy;
+			sourceTree = "<group>";
+		};
+		9AD4503E247CD43300087DC7 /* Quiz Group */ = {
+			isa = PBXGroup;
+			children = (
+				9AE3CCD224762CF300E9386E /* QuizStoryboard.storyboard */,
+				9A7E5020247627DA00AAC556 /* QuizViewController.swift */,
+				9AE3CCD5247632D200E9386E /* ResultViewController.swift */,
+			);
+			path = "Quiz Group";
+			sourceTree = "<group>";
+		};
+		9AD45044247CD4A200087DC7 /* Boarding Group */ = {
+			isa = PBXGroup;
+			children = (
+				9AD45040247CD47200087DC7 /* BoardingViewController.swift */,
+				9AD45047247CD56400087DC7 /* BoardingStoryboard.storyboard */,
+			);
+			path = "Boarding Group";
+			sourceTree = "<group>";
+		};
+		9AD45048247CD8D600087DC7 /* Main Group */ = {
+			isa = PBXGroup;
+			children = (
+				86F4820724655E7900F1B848 /* Main.storyboard */,
+				86F4820524655E7900F1B848 /* ViewController.swift */,
+			);
+			path = "Main Group";
+			sourceTree = "<group>";
+		};
+		9AD4504B247D5CE400087DC7 /* Awal Group */ = {
+			isa = PBXGroup;
+			children = (
+				9AD45050247D5D7C00087DC7 /* AwalStoryboard.storyboard */,
+				9AD4504C247D5D6800087DC7 /* AwalViewController.swift */,
+			);
+			path = "Awal Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,8 +181,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD4504E247D5D7C00087DC7 /* AwalStoryboard.storyboard in Resources */,
 				86F4821124655E7A00F1B848 /* LaunchScreen.storyboard in Resources */,
 				86F4820E24655E7A00F1B848 /* Assets.xcassets in Resources */,
+				9AD45045247CD56400087DC7 /* BoardingStoryboard.storyboard in Resources */,
+				9AE3CCD024762CF300E9386E /* QuizStoryboard.storyboard in Resources */,
 				86F4820924655E7900F1B848 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,9 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				86F4820624655E7900F1B848 /* ViewController.swift in Sources */,
+				9A7E5021247627DA00AAC556 /* QuizViewController.swift in Sources */,
 				86F4820C24655E7900F1B848 /* vovy.xcdatamodeld in Sources */,
+				9AD45041247CD47200087DC7 /* BoardingViewController.swift in Sources */,
 				86F4820224655E7900F1B848 /* AppDelegate.swift in Sources */,
 				86F4820424655E7900F1B848 /* SceneDelegate.swift in Sources */,
+				9AE3CCD6247632D200E9386E /* ResultViewController.swift in Sources */,
+				9AD4504D247D5D6800087DC7 /* AwalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +225,30 @@
 				86F4821024655E7A00F1B848 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9AD45047247CD56400087DC7 /* BoardingStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AD45046247CD56400087DC7 /* Base */,
+			);
+			name = BoardingStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		9AD45050247D5D7C00087DC7 /* AwalStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AD4504F247D5D7C00087DC7 /* Base */,
+			);
+			name = AwalStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		9AE3CCD224762CF300E9386E /* QuizStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AE3CCD124762CF300E9386E /* Base */,
+			);
+			name = QuizStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -289,12 +373,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6XSU8A6MK4;
 				INFOPLIST_FILE = vovy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy;
+				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy.kk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -306,12 +391,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6XSU8A6MK4;
 				INFOPLIST_FILE = vovy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy;
+				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy.kk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
