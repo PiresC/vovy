@@ -10,13 +10,12 @@ import Foundation
 
 class LocalStorage {
     static let defaults = UserDefaults.standard
-    static let BASE_API = "http://localhost:3000/users/"
+    static let BASE_API = "https://mc2-be.herokuapp.com/users/"
     
     enum State {
         case create
         case update
     }
-    
     
     static func getCategory() -> Array<String>{
         var category:Array<String> = []
@@ -37,17 +36,21 @@ class LocalStorage {
         }
         return ""
     }
+    
     static func getDeviceToken() -> String {
         if let deviceId = defaults.string(forKey: "deviceId") {
             return deviceId
         }
         return ""
     }
+    
     static func getUUID() -> String {
         if let uuid = defaults.string(forKey: "uuid") {
             return uuid
+        } else {
+            defaults.set(NSUUID().uuidString, forKey: "uuid")
         }
-        return ""
+        return getUUID()
     }
     
     static func getQuizFlag() -> Bool {
@@ -61,9 +64,8 @@ class LocalStorage {
     
     static func postData(state:State) {
         let uuid = getUUID()
-        let session = URLSession.shared
-        var url:URL?
-        
+        print(uuid)
+        var url:URL!
         switch state {
             case .create:
                  url = URL(string: BASE_API)
@@ -71,34 +73,33 @@ class LocalStorage {
                  url = URL(string: "\(BASE_API)\(uuid)")
         }
         
-        var request = URLRequest(url: url!)
+        var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Powered by Swift!", forHTTPHeaderField: "X-Powered-By")
-        let json = [
-            "category": getCategory(),
-            "name": getName(),
-            "deviceId": getDeviceToken(),
-            "uuid": getUUID()
-        ] as [String : Any]
-        let jsonData = try! JSONSerialization.data(withJSONObject: json, options: [])
-        print(jsonData)
-        let task = session.uploadTask(with: request, from: jsonData) { data, response, error in
-            if let httpResponse = response as? HTTPURLResponse {
-                print(httpResponse.statusCode)
-            }
+        
+        let payload = payloadStringBuilder().data(using: .utf8)!
+        let task = URLSession.shared.uploadTask(with: request, from: payload) { data, response, error in
+            print(String(data: data!, encoding: .utf8) ?? "cant compare")
         }
-
         task.resume()
     }
     
-    static func saveCategory(_ category1:String, _ category2:String?, _ category3:String?) {
-        defaults.set(category1, forKey: "category1")
-        if let category = category2 {
-            defaults.set(category, forKey: "category2")
+    private static func payloadStringBuilder() -> String{
+        var baseParams = "uuid=\(getUUID())&deviceId=\(getDeviceToken())&name=\(getName())"
+        let category = getCategory()
+        print(baseParams)
+        if(category.count > 0){
+            for i in 0...(category.count-1) {
+                baseParams += "&category[\(i)]=\(category[i])"
+            }
         }
-        if let category = category2 {
-            defaults.set(category, forKey: "category3")
+        return baseParams
+    }
+    
+    static func saveCategory(_ categories:Array<String>) {
+        if categories.count > 0 {
+            for i in 0...(categories.count-1) {
+                defaults.set(categories[i], forKey: "category\(i+1)")
+            }
         }
         postData(state: .update)
     }
@@ -109,15 +110,12 @@ class LocalStorage {
     }
     
     static func saveDeviceToken(_ token:String) {
-            defaults.set(token, forKey: "deviceId")
-            saveUUID()
-            postData(state: .create)
-    }
-    static func saveUUID() {
-        if let uuid = defaults.string(forKey: "uuid") {
-            print(uuid)
+        defaults.set(token, forKey: "deviceId")
+        if defaults.string(forKey: "deviceId") != nil {
+            postData(state: .update)
         } else {
-            defaults.set(NSUUID().uuidString, forKey: "uuid")
+            postData(state: .create)
         }
     }
 }
+

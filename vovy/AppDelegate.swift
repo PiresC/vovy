@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         notification.notificationConfig()
         notification.notificationCenter.delegate = notification
+        application.applicationIconBadgeNumber = 0;
         return true
     }
     
@@ -26,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) {
       let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
       let token = tokenParts.joined()
-//      LocalStorage.saveDeviceToken(token)
+      LocalStorage.saveDeviceToken(token)
     }
 
     func application(
@@ -93,6 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+    
 }
 
