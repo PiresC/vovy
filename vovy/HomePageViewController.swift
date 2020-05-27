@@ -25,6 +25,10 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         setupCollection()
         self.loadJson()
+        //LocalStorage.setQuizFlag(false)
+        if LocalStorage.getQuizFlag() == false {
+            performSegue(withIdentifier: "toOnBoarding", sender: nil)
+        }
         
         loadingImage.loadGif(name: "loading")
         kegiatanCollectionView.isHidden = true

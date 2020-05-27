@@ -45,7 +45,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="button mainkan quiz"/>
                                 <connections>
-                                    <segue destination="lWL-EB-vt3" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="qjn-O0-IBU"/>
+                                    <segue destination="lWL-EB-vt3" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="qjn-O0-IBU"/>
                                 </connections>
                             </button>
                         </subviews>

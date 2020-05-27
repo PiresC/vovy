@@ -191,7 +191,6 @@ dan juga pengecekan naskah </string>
                                 <state key="normal" title="Button" image="lanjutkan"/>
                                 <connections>
                                     <action selector="gotoHome:" destination="qgb-m1-kWl" eventType="touchUpInside" id="MJL-yO-Kk4"/>
-                                    <segue destination="28L-0n-PIb" kind="presentation" identifier="toHomePage" modalPresentationStyle="currentContext" id="tQf-9n-jD9"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="desain" translatesAutoresizingMaskIntoConstraints="NO" id="92z-ei-9SN">
@@ -213,14 +212,6 @@ dan juga pengecekan naskah </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yo1-5J-n4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="723" y="-56"/>
-        </scene>
-        <!--HomePage-->
-        <scene sceneID="GPG-hS-UM4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HomePage" id="28L-0n-PIb" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eua-4a-Ryf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1654" y="-100"/>
         </scene>
     </scenes>
     <resources>

@@ -1,87 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r90-xm-uiW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EZC-P1-4ZC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Boarding View Controller-->
-        <scene sceneID="3h2-Yd-DoC">
+        <!--Home Page View Controller-->
+        <scene sceneID="fZW-ng-ABi">
             <objects>
-                <viewController id="MdO-H8-eB2" customClass="BoardingViewController" customModule="vovy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GlH-dh-l1P">
+                <viewController id="2O6-wr-Ggd" customClass="HomePageViewController" customModule="vovy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="omB-Zw-9t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="TJl-c7-7Su">
-                                <rect key="frame" x="188" y="708" width="39" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Halo Relawan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-Qr-8Do">
+                                <rect key="frame" x="20" y="102" width="202" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="currentPageIndicatorTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeG-Mp-utV">
-                                <rect key="frame" x="20" y="775" width="374" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siap membantu untuk hari ini?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7r-di-6l1">
+                                <rect key="frame" x="20" y="149" width="244" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96719795470000003" green="0.4508904815" blue="0.47842699290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Selanjutnya">
-                                    <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rekomendasi Kegiatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzY-4R-Iiq">
+                                <rect key="frame" x="20" y="447" width="199" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwY-CO-ok5">
+                                <rect key="frame" x="281" y="441" width="109" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Lihat Semua"/>
                                 <connections>
-                                    <action selector="toDashboard:" destination="MdO-H8-eB2" eventType="touchUpInside" id="mXA-BO-PR6"/>
+                                    <action selector="lihatSemuaKegiatan:" destination="2O6-wr-Ggd" eventType="touchUpInside" id="f7a-HZ-b7Z"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWY-RH-VDa">
-                                <rect key="frame" x="0.0" y="-23" width="414" height="723"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am8-Ki-Vc3">
+                                <rect key="frame" x="20" y="718" width="73" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="H0H-MF-aau"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="sgZ-cj-3RC"/>
-                            </scrollView>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeC-78-DCB">
+                                <rect key="frame" x="281" y="714" width="109" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Lihat Semua"/>
+                                <connections>
+                                    <segue destination="1XJ-eT-py3" kind="show" id="oZd-B5-qlL"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uzK-Df-zAQ">
+                                <rect key="frame" x="20" y="753" width="374" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Wa-n9-kDx">
+                                    <size key="itemSize" width="90" height="140"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ttn-R9-Wqk">
+                                        <rect key="frame" x="0.0" y="29" width="85" height="85"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Z15-OA-rda">
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="85" height="85"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="penuliseditor" translatesAutoresizingMaskIntoConstraints="NO" id="crm-hE-RDC">
+                                <rect key="frame" x="20" y="186" width="374" height="242"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tme-pb-xVa">
+                                <rect key="frame" x="345" y="102" width="45" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="profile"/>
+                                <connections>
+                                    <segue destination="Hkh-1B-0Gw" kind="show" identifier="toProfile" id="dm3-xx-g2r"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z1h-K6-bqH">
+                                <rect key="frame" x="31" y="479" width="353" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YuZ-Ht-LMu">
+                                    <size key="itemSize" width="90" height="140"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eUJ-b7-pXu">
+                                        <rect key="frame" x="0.0" y="39" width="90" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CHz-0P-HHf">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boj-KQ-lMN">
+                                <rect key="frame" x="20" y="494" width="364" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="o8s-7T-yDO"/>
+                        <viewLayoutGuide key="safeArea" id="R6C-2s-Vrd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ivr-cq-t5c"/>
+                    <navigationItem key="navigationItem" id="91B-ej-spu"/>
                     <connections>
-                        <outlet property="pageControl" destination="TJl-c7-7Su" id="tb6-ZY-1kP"/>
-                        <outlet property="scrollView" destination="qWY-RH-VDa" id="Ytb-Ha-DNB"/>
-                        <outlet property="selanjutnya" destination="QeG-Mp-utV" id="3eO-6Z-xaf"/>
-                        <segue destination="YNH-R5-Nx6" kind="presentation" identifier="Awalini" modalPresentationStyle="currentContext" id="f5z-nF-6Xm"/>
+                        <outlet property="KategoriCollectionView" destination="uzK-Df-zAQ" id="0xQ-fv-Qrq"/>
+                        <outlet property="kegiatanCollectionView" destination="z1h-K6-bqH" id="tXm-73-iMI"/>
+                        <outlet property="loadingImage" destination="boj-KQ-lMN" id="f2b-LP-guv"/>
+                        <segue destination="TZx-4w-zSQ" kind="show" identifier="toDetailKegiatan" id="4HC-7E-Sxa"/>
+                        <segue destination="39D-xe-zfa" kind="show" identifier="toLihatSemuaKegiatan" id="fq4-1b-n9b"/>
+                        <segue destination="V8T-51-lp1" kind="presentation" identifier="toOnBoarding" modalPresentationStyle="fullScreen" id="Gc1-Fb-J8q"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FNF-m5-YKQ" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z3g-Hn-xqy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2749.275362318841" y="-17.410714285714285"/>
         </scene>
-        <!--AwalStoryboard-->
-        <scene sceneID="OH1-Cp-hjl">
+        <!--lihatSemuaKegiatan-->
+        <scene sceneID="WzQ-wh-cKC">
             <objects>
-                <viewControllerPlaceholder storyboardName="AwalStoryboard" id="YNH-R5-Nx6" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Z5K-x2-TN4"/>
+                <viewControllerPlaceholder storyboardIdentifier="lihatSemuaKegiatan" storyboardName="lihatSemuaKegiatan" id="39D-xe-zfa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="747-Nu-LfE"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Idn-jT-yNt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xL2-cY-iX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758.6956521739132" y="95.758928571428569"/>
+            <point key="canvasLocation" x="3377.5362318840585" y="-24.107142857142858"/>
+        </scene>
+        <!--lihatSemuaKategori-->
+        <scene sceneID="rzq-or-27q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="lihatSemuaKategori" id="1XJ-eT-py3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VLQ-UE-PRn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7S-bp-0V2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3362.3188405797105" y="109.82142857142857"/>
+        </scene>
+        <!--BoardingStoryboard-->
+        <scene sceneID="Hzm-aL-g07">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BoardingStoryboard" id="V8T-51-lp1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WAf-ui-url"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7eP-DV-D7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3353" y="-341"/>
+        </scene>
+        <!--ProfileView-->
+        <scene sceneID="DrO-qC-91j">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileView" id="Hkh-1B-0Gw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LWv-EY-KUm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nd-Rd-drY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3363.04347826087" y="-224.33035714285714"/>
+        </scene>
+        <!--detailKegiatan-->
+        <scene sceneID="bWg-34-S0V">
+            <objects>
+                <viewControllerPlaceholder storyboardName="detailKegiatan" id="TZx-4w-zSQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OHy-VM-qfX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4I-eM-2V3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3408.6956521739135" y="-109.15178571428571"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="SAT-TV-T0c">
+        <scene sceneID="nqe-bg-312">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r90-xm-uiW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EZC-P1-4ZC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eNy-m0-lCu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H9B-6S-NB8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MdO-H8-eB2" kind="relationship" relationship="rootViewController" id="iPq-ji-0Rn"/>
+                        <segue destination="2O6-wr-Ggd" kind="relationship" relationship="rootViewController" id="JaL-I8-4MV"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FcB-iA-cvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KM-nn-6Lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1839.1304347826087" y="-17.410714285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="penuliseditor" width="330" height="214"/>
+        <image name="profile" width="45" height="46"/>
+    </resources>
 </document>

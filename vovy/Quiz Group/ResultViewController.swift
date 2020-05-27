@@ -426,9 +426,14 @@ class ResultViewController: UIViewController {
         }
         
     @IBAction func gotoHome(_ sender: Any) {
+        LocalStorage.setQuizFlag(true)
+        restartApplication()
         
-        dismiss(animated: true, completion: nil)
-        
+    }
+    
+    func restartApplication () {
+        self.dismiss(animated: true, completion: {});
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
 

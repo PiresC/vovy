@@ -40,6 +40,7 @@ class BoardingViewController: UIViewController, UIScrollViewDelegate {
     self.view.layoutIfNeeded()
         selanjutnya.layer.cornerRadius = 10
         selanjutnya.layer.masksToBounds = true
+        
            self.scrollView.delegate = self
            scrollView.isPagingEnabled = true
            scrollView.showsHorizontalScrollIndicator = false
@@ -127,7 +128,7 @@ class BoardingViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? AwalViewController {
+        if segue.destination is AwalViewController {
             
         }
     }

@@ -12,12 +12,12 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let notification = Notification.getInstance()
-    
+//    let notification = Notification.getInstance()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        notification.notificationConfig()
-        notification.notificationCenter.delegate = notification
-        return true
+//        notification.notificationConfig()
+//        notification.notificationCenter.delegate = notification
+          return true
     }
     
     func application(

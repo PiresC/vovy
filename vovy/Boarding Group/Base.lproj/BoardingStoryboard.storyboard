@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDQ-A8-8ov">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,16 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lr6-7z-a8R">
-                                <rect key="frame" x="0.0" y="44" width="414" height="672"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="pTL-Jh-mZK"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="fN3-a4-HFT"/>
-                            </scrollView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redbutton" translatesAutoresizingMaskIntoConstraints="NO" id="urq-9T-rox">
-                                <rect key="frame" x="32" y="763" width="350" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="tzC-cf-9eK">
                                 <rect key="frame" x="188" y="708" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -32,8 +22,9 @@
                                 <color key="currentPageIndicatorTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZW-Am-qBN">
-                                <rect key="frame" x="159" y="775" width="97" height="33"/>
+                                <rect key="frame" x="20" y="775" width="374" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96719795470000003" green="0.4508904815" blue="0.47842699290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Selanjutnya">
                                     <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,6 +33,12 @@
                                     <action selector="toDashboard:" destination="QDQ-A8-8ov" eventType="touchUpInside" id="w7r-Xg-hW0"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lr6-7z-a8R">
+                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="pTL-Jh-mZK"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="fN3-a4-HFT"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dp6-2e-FAF"/>
@@ -50,7 +47,7 @@
                         <outlet property="pageControl" destination="tzC-cf-9eK" id="h6X-bL-Ks6"/>
                         <outlet property="scrollView" destination="Lr6-7z-a8R" id="gKA-3m-X7i"/>
                         <outlet property="selanjutnya" destination="pZW-Am-qBN" id="iCY-Vr-rIL"/>
-                        <segue destination="3Gg-AX-OVm" kind="custom" identifier="Awalini" id="O04-Aa-h5m"/>
+                        <segue destination="3Gg-AX-OVm" kind="presentation" identifier="Awalini" modalPresentationStyle="fullScreen" id="O04-Aa-h5m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0A-Q7-o9E" sceneMemberID="firstResponder"/>
@@ -66,7 +63,4 @@
             <point key="canvasLocation" x="849" y="96"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="redbutton" width="318" height="43"/>
-    </resources>
 </document>
