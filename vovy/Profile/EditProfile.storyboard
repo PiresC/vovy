@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8iH-yn-BXj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +16,147 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="hbZ-Uj-Vk8">
-                                <rect key="frame" x="149" y="113" width="117" height="117"/>
+                                <rect key="frame" x="149" y="116" width="117" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IFf-sA-Wcm">
+                                <rect key="frame" x="136" y="307" width="236" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="boxNama:" destination="8iH-yn-BXj" eventType="editingDidEnd" id="nfK-Ps-XjJ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4hE-L6-BhV">
+                                <rect key="frame" x="136" y="353" width="236" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="boxDesc:" destination="8iH-yn-BXj" eventType="editingDidEnd" id="8AH-IT-05T"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgF-hD-N6q">
+                                <rect key="frame" x="33" y="310" width="52" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deskripsi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1X-c9-aIq">
+                                <rect key="frame" x="33" y="358" width="81" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ganti Kegiatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0z-hj-0AY">
+                                <rect key="frame" x="33" y="411" width="128" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c2-zS-gTB">
+                                <rect key="frame" x="25" y="471" width="94" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Admin" image="dim administrasi"/>
+                                <connections>
+                                    <action selector="buttonSemua:" destination="8iH-yn-BXj" eventType="touchUpInside" id="sZK-Qt-61l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-18-ci1">
+                                <rect key="frame" x="160" y="471" width="94" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Desain" image="dim desain"/>
+                                <connections>
+                                    <action selector="buttonSemua:" destination="8iH-yn-BXj" eventType="touchUpInside" id="ujr-70-A2h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-iJ-5BI">
+                                <rect key="frame" x="295" y="471" width="94" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Managemen" image="dim managemen"/>
+                                <connections>
+                                    <action selector="buttonSemua:" destination="8iH-yn-BXj" eventType="touchUpInside" id="f7Z-KZ-LX9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuL-rY-M5F">
+                                <rect key="frame" x="25" y="594" width="94" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pengajaran" image="dim pengajaran"/>
+                                <connections>
+                                    <action selector="buttonSemua:" destination="8iH-yn-BXj" eventType="touchUpInside" id="edr-PB-upv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH0-jO-ymh">
+                                <rect key="frame" x="160" y="594" width="94" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Penulis" image="Dim penulis"/>
+                                <connections>
+                                    <action selector="buttonSemua:" destination="8iH-yn-BXj" eventType="touchUpInside" id="s4q-Ea-daQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xV4-9w-Hgc">
+                                <rect key="frame" x="295" y="594" width="94" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Riset" image="dim riset"/>
+                                <connections>
+                                    <action selector="buttonSemua:" destination="8iH-yn-BXj" eventType="touchUpInside" id="kbu-VL-Nr6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s99-zd-rKj">
+                                <rect key="frame" x="26" y="717" width="94" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sosialisasi" image="dim sosialisasi"/>
+                                <connections>
+                                    <action selector="buttonSemua:" destination="8iH-yn-BXj" eventType="touchUpInside" id="zfs-pi-uMt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49V-Xb-iGP">
+                                <rect key="frame" x="161" y="717" width="94" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Teknologi" image="dim teknologi"/>
+                                <connections>
+                                    <action selector="buttonSemua:" destination="8iH-yn-BXj" eventType="touchUpInside" id="dPY-gT-dlj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVz-8s-lCv">
+                                <rect key="frame" x="296" y="717" width="94" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Translator" image="dim trasnlator"/>
+                                <connections>
+                                    <action selector="buttonSemua:" destination="8iH-yn-BXj" eventType="touchUpInside" id="wjM-KU-AL2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BS4-SN-3Ks">
+                                <rect key="frame" x="124" y="241" width="168" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Ganti Gambar Profile"/>
+                                <connections>
+                                    <action selector="btnChooseImageOnClick:" destination="8iH-yn-BXj" eventType="touchUpInside" id="AyO-LP-yBC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="zU9-Ed-Ths"/>
                     </view>
+                    <connections>
+                        <outlet property="btnChooseImage" destination="BS4-SN-3Ks" id="HMH-u0-W5e"/>
+                        <outlet property="buttonAdmin" destination="9c2-zS-gTB" id="WL6-3W-5Hq"/>
+                        <outlet property="buttonDesain" destination="V7P-18-ci1" id="VPW-6U-tFm"/>
+                        <outlet property="buttonManagemen" destination="gpe-iJ-5BI" id="tbB-DR-juO"/>
+                        <outlet property="buttonPengajaran" destination="iuL-rY-M5F" id="pBd-i5-OJV"/>
+                        <outlet property="buttonPenulis" destination="IH0-jO-ymh" id="24b-TQ-W6u"/>
+                        <outlet property="buttonRiset" destination="xV4-9w-Hgc" id="eLj-PL-OG1"/>
+                        <outlet property="buttonSosialisasi" destination="s99-zd-rKj" id="orL-0c-Tjx"/>
+                        <outlet property="buttonTeknologi" destination="49V-Xb-iGP" id="cZY-1J-Ydm"/>
+                        <outlet property="buttonTranslator" destination="DVz-8s-lCv" id="eXC-7d-Ubi"/>
+                        <outlet property="imgProfile" destination="hbZ-Uj-Vk8" id="7Cr-eS-WDi"/>
+                        <outlet property="isiNama" destination="IFf-sA-Wcm" id="gAC-5K-xuL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoC-6n-x0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,6 +164,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Dim penulis" width="2083" height="2083"/>
+        <image name="dim administrasi" width="2083" height="2083"/>
+        <image name="dim desain" width="2083" height="2083"/>
+        <image name="dim managemen" width="2083" height="2083"/>
+        <image name="dim pengajaran" width="2083" height="2083"/>
+        <image name="dim riset" width="2083" height="2083"/>
+        <image name="dim sosialisasi" width="2083" height="2083"/>
+        <image name="dim teknologi" width="2083" height="2083"/>
+        <image name="dim trasnlator" width="2083" height="2083"/>
         <image name="profile" width="45" height="46"/>
     </resources>
 </document>
