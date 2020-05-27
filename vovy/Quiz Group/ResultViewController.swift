@@ -425,6 +425,11 @@ class ResultViewController: UIViewController {
             
         }
         
+    @IBAction func gotoHome(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
     
 
     
