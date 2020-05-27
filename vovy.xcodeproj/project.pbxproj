@@ -18,6 +18,7 @@
 		86853A39247D43B8009C6DB2 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 86853A38247D43B8009C6DB2 /* loading.gif */; };
 		86853A3C247D5B0A009C6DB2 /* detailKegiatan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86853A3B247D5B0A009C6DB2 /* detailKegiatan.storyboard */; };
 		86853A3E247D5B2F009C6DB2 /* detialKegiatanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86853A3D247D5B2F009C6DB2 /* detialKegiatanViewController.swift */; };
+		86853A40247E396D009C6DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86853A3F247E396D009C6DB2 /* Main.storyboard */; };
 		86B13FFD247BA51800512B51 /* homeKategoriCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B13FFB247BA51800512B51 /* homeKategoriCollectionView.swift */; };
 		86B13FFE247BA51800512B51 /* homeKategoriCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B13FFC247BA51800512B51 /* homeKategoriCollectionView.xib */; };
 		86B14001247BEE7900512B51 /* lihatSemuaKategori.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B14000247BEE7900512B51 /* lihatSemuaKategori.storyboard */; };
@@ -30,11 +31,16 @@
 		86B14013247C074300512B51 /* lihatSemuaKegiatanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B14011247C074300512B51 /* lihatSemuaKegiatanCell.xib */; };
 		86F4820224655E7900F1B848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4820124655E7900F1B848 /* AppDelegate.swift */; };
 		86F4820424655E7900F1B848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4820324655E7900F1B848 /* SceneDelegate.swift */; };
-		86F4820624655E7900F1B848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4820524655E7900F1B848 /* ViewController.swift */; };
-		86F4820924655E7900F1B848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F4820724655E7900F1B848 /* Main.storyboard */; };
 		86F4820C24655E7900F1B848 /* vovy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86F4820A24655E7900F1B848 /* vovy.xcdatamodeld */; };
 		86F4820E24655E7A00F1B848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F4820D24655E7A00F1B848 /* Assets.xcassets */; };
 		86F4821124655E7A00F1B848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F4820F24655E7A00F1B848 /* LaunchScreen.storyboard */; };
+		9A7E5021247627DA00AAC556 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E5020247627DA00AAC556 /* QuizViewController.swift */; };
+		9AD45041247CD47200087DC7 /* BoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD45040247CD47200087DC7 /* BoardingViewController.swift */; };
+		9AD45045247CD56400087DC7 /* BoardingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD45047247CD56400087DC7 /* BoardingStoryboard.storyboard */; };
+		9AD4504D247D5D6800087DC7 /* AwalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4504C247D5D6800087DC7 /* AwalViewController.swift */; };
+		9AD4504E247D5D7C00087DC7 /* AwalStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD45050247D5D7C00087DC7 /* AwalStoryboard.storyboard */; };
+		9AE3CCD024762CF300E9386E /* QuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE3CCD224762CF300E9386E /* QuizStoryboard.storyboard */; };
+		9AE3CCD6247632D200E9386E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE3CCD5247632D200E9386E /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +55,7 @@
 		86853A38247D43B8009C6DB2 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../../Desktop/loading.gif; sourceTree = "<group>"; };
 		86853A3B247D5B0A009C6DB2 /* detailKegiatan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = detailKegiatan.storyboard; sourceTree = "<group>"; };
 		86853A3D247D5B2F009C6DB2 /* detialKegiatanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detialKegiatanViewController.swift; sourceTree = "<group>"; };
+		86853A3F247E396D009C6DB2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		86B13FFB247BA51800512B51 /* homeKategoriCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeKategoriCollectionView.swift; sourceTree = "<group>"; };
 		86B13FFC247BA51800512B51 /* homeKategoriCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeKategoriCollectionView.xib; sourceTree = "<group>"; };
 		86B14000247BEE7900512B51 /* lihatSemuaKategori.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = lihatSemuaKategori.storyboard; sourceTree = "<group>"; };
@@ -62,12 +69,17 @@
 		86F481FE24655E7900F1B848 /* vovy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vovy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F4820124655E7900F1B848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86F4820324655E7900F1B848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86F4820524655E7900F1B848 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		86F4820824655E7900F1B848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86F4820B24655E7900F1B848 /* vovy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = vovy.xcdatamodel; sourceTree = "<group>"; };
 		86F4820D24655E7A00F1B848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86F4821024655E7A00F1B848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86F4821224655E7A00F1B848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A7E5020247627DA00AAC556 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		9AD45040247CD47200087DC7 /* BoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingViewController.swift; sourceTree = "<group>"; };
+		9AD45046247CD56400087DC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BoardingStoryboard.storyboard; sourceTree = "<group>"; };
+		9AD4504C247D5D6800087DC7 /* AwalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwalViewController.swift; sourceTree = "<group>"; };
+		9AD4504F247D5D7C00087DC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AwalStoryboard.storyboard; sourceTree = "<group>"; };
+		9AE3CCD124762CF300E9386E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QuizStoryboard.storyboard; sourceTree = "<group>"; };
+		9AE3CCD5247632D200E9386E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,15 +174,45 @@
 				867D4B2C247532770064D0B8 /* HomePage */,
 				86F4820124655E7900F1B848 /* AppDelegate.swift */,
 				86F4820324655E7900F1B848 /* SceneDelegate.swift */,
-				86F4820524655E7900F1B848 /* ViewController.swift */,
-				86F4820724655E7900F1B848 /* Main.storyboard */,
 				86F4820D24655E7A00F1B848 /* Assets.xcassets */,
+				9AD45044247CD4A200087DC7 /* Boarding Group */,
+				9AD4503E247CD43300087DC7 /* Quiz Group */,
+				9AD4504B247D5CE400087DC7 /* Awal Group */,
 				86F4820F24655E7A00F1B848 /* LaunchScreen.storyboard */,
 				86853A38247D43B8009C6DB2 /* loading.gif */,
 				86F4821224655E7A00F1B848 /* Info.plist */,
 				86F4820A24655E7900F1B848 /* vovy.xcdatamodeld */,
+				86853A3F247E396D009C6DB2 /* Main.storyboard */,
 			);
 			path = vovy;
+			sourceTree = "<group>";
+		};
+		9AD4503E247CD43300087DC7 /* Quiz Group */ = {
+			isa = PBXGroup;
+			children = (
+				9AE3CCD224762CF300E9386E /* QuizStoryboard.storyboard */,
+				9A7E5020247627DA00AAC556 /* QuizViewController.swift */,
+				9AE3CCD5247632D200E9386E /* ResultViewController.swift */,
+			);
+			path = "Quiz Group";
+			sourceTree = "<group>";
+		};
+		9AD45044247CD4A200087DC7 /* Boarding Group */ = {
+			isa = PBXGroup;
+			children = (
+				9AD45040247CD47200087DC7 /* BoardingViewController.swift */,
+				9AD45047247CD56400087DC7 /* BoardingStoryboard.storyboard */,
+			);
+			path = "Boarding Group";
+			sourceTree = "<group>";
+		};
+		9AD4504B247D5CE400087DC7 /* Awal Group */ = {
+			isa = PBXGroup;
+			children = (
+				9AD45050247D5D7C00087DC7 /* AwalStoryboard.storyboard */,
+				9AD4504C247D5D6800087DC7 /* AwalViewController.swift */,
+			);
+			path = "Awal Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD4504E247D5D7C00087DC7 /* AwalStoryboard.storyboard in Resources */,
 				86B1400B247BFB4100512B51 /* lihatSemuaKategoriCell.xib in Resources */,
 				867D4B2F24753A160064D0B8 /* EditProfile.storyboard in Resources */,
 				867D4B242474FB320064D0B8 /* HomePage.storyboard in Resources */,
@@ -239,8 +282,10 @@
 				86B1400D247C06C100512B51 /* lihatSemuaKegiatan.storyboard in Resources */,
 				86853A3C247D5B0A009C6DB2 /* detailKegiatan.storyboard in Resources */,
 				86F4820E24655E7A00F1B848 /* Assets.xcassets in Resources */,
+				9AD45045247CD56400087DC7 /* BoardingStoryboard.storyboard in Resources */,
+				9AE3CCD024762CF300E9386E /* QuizStoryboard.storyboard in Resources */,
+				86853A40247E396D009C6DB2 /* Main.storyboard in Resources */,
 				86B14013247C074300512B51 /* lihatSemuaKegiatanCell.xib in Resources */,
-				86F4820924655E7900F1B848 /* Main.storyboard in Resources */,
 				86853A39247D43B8009C6DB2 /* loading.gif in Resources */,
 				867D4B28247520030064D0B8 /* ProfileView.storyboard in Resources */,
 				86B14001247BEE7900512B51 /* lihatSemuaKategori.storyboard in Resources */,
@@ -257,38 +302,57 @@
 				86B14003247BEE8E00512B51 /* lihatSemuaKategoriViewController.swift in Sources */,
 				867D4B2A24752AA20064D0B8 /* ProfileViewController.swift in Sources */,
 				86B1400F247C06D000512B51 /* lihatSemuaKegiatanViewController.swift in Sources */,
-				86F4820624655E7900F1B848 /* ViewController.swift in Sources */,
+				9A7E5021247627DA00AAC556 /* QuizViewController.swift in Sources */,
 				86B14012247C074300512B51 /* lihatSemuaKegiatanCell.swift in Sources */,
 				86B13FFD247BA51800512B51 /* homeKategoriCollectionView.swift in Sources */,
 				867D4B3324753A4F0064D0B8 /* EditProfileController.swift in Sources */,
 				86853A37247D39A8009C6DB2 /* gifPlayer.swift in Sources */,
 				86F4820C24655E7900F1B848 /* vovy.xcdatamodeld in Sources */,
+				9AD45041247CD47200087DC7 /* BoardingViewController.swift in Sources */,
 				86B1400A247BFB4100512B51 /* lihatSemuaKategoriCell.swift in Sources */,
 				86853A3E247D5B2F009C6DB2 /* detialKegiatanViewController.swift in Sources */,
 				86853A35247D12CC009C6DB2 /* jsonStruct.swift in Sources */,
 				86F4820224655E7900F1B848 /* AppDelegate.swift in Sources */,
 				867D4B262474FB570064D0B8 /* HomePageViewController.swift in Sources */,
 				86F4820424655E7900F1B848 /* SceneDelegate.swift in Sources */,
+				9AE3CCD6247632D200E9386E /* ResultViewController.swift in Sources */,
+				9AD4504D247D5D6800087DC7 /* AwalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		86F4820724655E7900F1B848 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86F4820824655E7900F1B848 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		86F4820F24655E7A00F1B848 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				86F4821024655E7A00F1B848 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9AD45047247CD56400087DC7 /* BoardingStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AD45046247CD56400087DC7 /* Base */,
+			);
+			name = BoardingStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		9AD45050247D5D7C00087DC7 /* AwalStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AD4504F247D5D7C00087DC7 /* Base */,
+			);
+			name = AwalStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		9AE3CCD224762CF300E9386E /* QuizStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AE3CCD124762CF300E9386E /* Base */,
+			);
+			name = QuizStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -419,7 +483,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy;
+				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy.kk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -437,7 +501,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy;
+				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy.kk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class detialKegiatanViewController: ViewController {
+class detialKegiatanViewController: UIViewController {
     
     var volunteerData: dataStructure?
     @IBOutlet weak var judulVolunteer: UILabel!

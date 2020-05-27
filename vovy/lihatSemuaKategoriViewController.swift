@@ -8,7 +8,7 @@
 
 import UIKit
 
-class lihatSemuaKategoriViewController: ViewController {
+class lihatSemuaKategoriViewController: UIViewController {
     @IBOutlet weak var allKategori: UICollectionView!
     @IBOutlet weak var lihatSemua: UIButton!
     

@@ -11,7 +11,6 @@
         <!--Home Page View Controller-->
         <scene sceneID="End-nr-Pgr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QFa-h1-GaA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ep9-M5-Uuu" customClass="HomePageViewController" customModule="vovy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k69-FT-gtr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -60,7 +59,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Lihat Semua"/>
                                 <connections>
-                                    <segue destination="DmV-ll-QAa" kind="show" id="efU-6w-hLY"/>
+                                    <segue destination="DmV-ll-QAa" kind="presentation" id="efU-6w-hLY"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oGP-m2-g5h">
@@ -94,7 +93,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="profile"/>
                                 <connections>
-                                    <segue destination="KTC-tl-ndE" kind="show" identifier="toProfile" id="HCS-1s-qV2"/>
+                                    <segue destination="KTC-tl-ndE" kind="presentation" identifier="toProfile" id="HCS-1s-qV2"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-4P-AgD">
@@ -131,50 +130,51 @@
                         <outlet property="KategoriCollectionView" destination="oGP-m2-g5h" id="1r9-xy-rIV"/>
                         <outlet property="kegiatanCollectionView" destination="T4T-4P-AgD" id="ogh-RB-M9r"/>
                         <outlet property="loadingImage" destination="ced-7m-7Tr" id="Nld-IR-uWQ"/>
-                        <segue destination="vb5-Td-7qv" kind="show" identifier="toDetailKegiatan" id="emS-m4-WtX"/>
-                        <segue destination="lPb-kR-IvJ" kind="show" identifier="toLihatSemuaKegiatan" id="3hc-UF-y8s"/>
+                        <segue destination="vb5-Td-7qv" kind="presentation" identifier="toDetailKegiatan" id="emS-m4-WtX"/>
+                        <segue destination="lPb-kR-IvJ" kind="presentation" identifier="toLihatSemuaKegiatan" modalPresentationStyle="pageSheet" id="3hc-UF-y8s"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFa-h1-GaA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1839.1304347826087" y="-17.410714285714285"/>
         </scene>
         <!--lihatSemuaKegiatan-->
         <scene sceneID="YtC-aA-LmE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="87a-IB-CYY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardIdentifier="lihatSemuaKegiatan" storyboardName="lihatSemuaKegiatan" id="lPb-kR-IvJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9jF-ph-Qa5"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="87a-IB-CYY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2468" y="-24"/>
         </scene>
         <!--lihatSemuaKategori-->
         <scene sceneID="vGZ-9Z-GSl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iWR-Oe-1eh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="lihatSemuaKategori" id="DmV-ll-QAa" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="8Hi-Zn-05H"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWR-Oe-1eh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2453" y="110"/>
         </scene>
         <!--ProfileView-->
         <scene sceneID="4YJ-6C-SYW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PO0-H8-oFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="ProfileView" id="KTC-tl-ndE" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="2a1-Is-anB"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PO0-H8-oFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2452.898550724638" y="-224.33035714285714"/>
         </scene>
         <!--detailKegiatan-->
         <scene sceneID="PXJ-Ti-aaW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NYF-kJ-8Uc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="detailKegiatan" id="vb5-Td-7qv" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Sq0-eE-I4y"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYF-kJ-8Uc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2499" y="-109"/>
         </scene>
