@@ -25,7 +25,8 @@ class ResultViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            
+            let convert = QuizCategoryConversion.init([isiSebelah, isiSebelah2, isiSebelah3])
+            print(convert.getCategoryArray())
             switch isiSebelah {
                 
     //1

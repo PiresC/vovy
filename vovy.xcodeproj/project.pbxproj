@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42606DAF247F4865004E7822 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 42606DAE247F4865004E7822 /* loading.gif */; };
+		42606DB1247F49E4004E7822 /* QuizCategoryConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42606DB0247F49E4004E7822 /* QuizCategoryConversion.swift */; };
 		8618EE46247E4D650097EEA2 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8618EE45247E4D650097EEA2 /* LocalStorage.swift */; };
 		8618EE48247E4D990097EEA2 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8618EE47247E4D990097EEA2 /* Notification.swift */; };
 		8618EE4A247E50420097EEA2 /* restartApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8618EE49247E50420097EEA2 /* restartApps.swift */; };
@@ -18,7 +20,6 @@
 		867D4B3324753A4F0064D0B8 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D4B3224753A4F0064D0B8 /* EditProfileController.swift */; };
 		86853A35247D12CC009C6DB2 /* jsonStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86853A34247D12CC009C6DB2 /* jsonStruct.swift */; };
 		86853A37247D39A8009C6DB2 /* gifPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86853A36247D39A8009C6DB2 /* gifPlayer.swift */; };
-		86853A39247D43B8009C6DB2 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 86853A38247D43B8009C6DB2 /* loading.gif */; };
 		86853A3C247D5B0A009C6DB2 /* detailKegiatan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86853A3B247D5B0A009C6DB2 /* detailKegiatan.storyboard */; };
 		86853A3E247D5B2F009C6DB2 /* detialKegiatanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86853A3D247D5B2F009C6DB2 /* detialKegiatanViewController.swift */; };
 		86853A40247E396D009C6DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86853A3F247E396D009C6DB2 /* Main.storyboard */; };
@@ -47,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42606DAE247F4865004E7822 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../Desktop/loading.gif; sourceTree = "<group>"; };
+		42606DB0247F49E4004E7822 /* QuizCategoryConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCategoryConversion.swift; sourceTree = "<group>"; };
 		8618EE45247E4D650097EEA2 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		8618EE47247E4D990097EEA2 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		8618EE49247E50420097EEA2 /* restartApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restartApps.swift; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		867D4B3224753A4F0064D0B8 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		86853A34247D12CC009C6DB2 /* jsonStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonStruct.swift; sourceTree = "<group>"; };
 		86853A36247D39A8009C6DB2 /* gifPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifPlayer.swift; sourceTree = "<group>"; };
-		86853A38247D43B8009C6DB2 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../../Desktop/loading.gif; sourceTree = "<group>"; };
 		86853A3B247D5B0A009C6DB2 /* detailKegiatan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = detailKegiatan.storyboard; sourceTree = "<group>"; };
 		86853A3D247D5B2F009C6DB2 /* detialKegiatanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detialKegiatanViewController.swift; sourceTree = "<group>"; };
 		86853A3F247E396D009C6DB2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				86853A34247D12CC009C6DB2 /* jsonStruct.swift */,
 				86853A36247D39A8009C6DB2 /* gifPlayer.swift */,
 				8618EE49247E50420097EEA2 /* restartApps.swift */,
+				42606DB0247F49E4004E7822 /* QuizCategoryConversion.swift */,
 			);
 			path = KumpulanStruct;
 			sourceTree = "<group>";
@@ -188,10 +191,10 @@
 				9AD4503E247CD43300087DC7 /* Quiz Group */,
 				9AD4504B247D5CE400087DC7 /* Awal Group */,
 				86F4820F24655E7A00F1B848 /* LaunchScreen.storyboard */,
-				86853A38247D43B8009C6DB2 /* loading.gif */,
 				86F4821224655E7A00F1B848 /* Info.plist */,
 				86F4820A24655E7900F1B848 /* vovy.xcdatamodeld */,
 				86853A3F247E396D009C6DB2 /* Main.storyboard */,
+				42606DAE247F4865004E7822 /* loading.gif */,
 			);
 			path = vovy;
 			sourceTree = "<group>";
@@ -295,7 +298,7 @@
 				9AE3CCD024762CF300E9386E /* QuizStoryboard.storyboard in Resources */,
 				86853A40247E396D009C6DB2 /* Main.storyboard in Resources */,
 				86B14013247C074300512B51 /* lihatSemuaKegiatanCell.xib in Resources */,
-				86853A39247D43B8009C6DB2 /* loading.gif in Resources */,
+				42606DAF247F4865004E7822 /* loading.gif in Resources */,
 				867D4B28247520030064D0B8 /* ProfileView.storyboard in Resources */,
 				86B14001247BEE7900512B51 /* lihatSemuaKategori.storyboard in Resources */,
 			);
@@ -326,6 +329,7 @@
 				8618EE4A247E50420097EEA2 /* restartApps.swift in Sources */,
 				86F4820424655E7900F1B848 /* SceneDelegate.swift in Sources */,
 				8618EE48247E4D990097EEA2 /* Notification.swift in Sources */,
+				42606DB1247F49E4004E7822 /* QuizCategoryConversion.swift in Sources */,
 				9AE3CCD6247632D200E9386E /* ResultViewController.swift in Sources */,
 				9AD4504D247D5D6800087DC7 /* AwalViewController.swift in Sources */,
 				8618EE46247E4D650097EEA2 /* LocalStorage.swift in Sources */,
@@ -489,13 +493,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QQS2536587;
+				DEVELOPMENT_TEAM = 87WHDY7XDH;
 				INFOPLIST_FILE = vovy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy.kk;
+				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,13 +511,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QQS2536587;
+				DEVELOPMENT_TEAM = 87WHDY7XDH;
 				INFOPLIST_FILE = vovy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy.kk;
+				PRODUCT_BUNDLE_IDENTIFIER = Alfon.vovy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
