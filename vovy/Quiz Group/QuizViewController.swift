@@ -80,6 +80,23 @@ class QuizViewController: UIViewController {
         isiAkhir = baru[0]
         isiAkhir2 = baru[1]
         isiAkhir3 = baru[2]
+        performSegue(withIdentifier: "toResult", sender: "")
+    }
+    
+    private func doNext(){
+        emptyDic["Realistic"] = a
+        emptyDic["Investigate"] = b
+        emptyDic["Artistic"] = c
+        emptyDic["Social"] = d
+        emptyDic["Entreprising"] = e
+        emptyDic["Conventional"] = f
+        emptyDic["English"] = g
+        
+        let baru = emptyDic.sortedKeysByValue(isOrderedBefore: >)
+        isiAkhir = baru[0]
+        isiAkhir2 = baru[1]
+        isiAkhir3 = baru[2]
+        performSegue(withIdentifier: "toResult", sender: "")
     }
     
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -94,10 +111,18 @@ class QuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-             updateUI()
-           updateJawaban()
-           buttonSelesai.alpha = 0
+        updateUI()
+        updateJawaban()
+        configButton()
+        buttonSelesai.alpha = 0
+    }
+    
+    private func configButton() {
+        let buttons = [jawabanSatu, jawabanDua, jawabanTiga, jawabanEmpat, jawabanLima]
+        
+        for button in buttons {
+            button?.titleEdgeInsets = UIEdgeInsets(top:0 ,left: 18,bottom: 0,right: 0)
+        }
     }
     
     
@@ -270,26 +295,27 @@ class QuizViewController: UIViewController {
                     case 0:
                         a += 2
                         f += 2
-                    buttonSelesai.alpha = 1
+//                    buttonSelesai.alpha = 1
                     case 1:
                         a += 1
                         f += 1
-                    buttonSelesai.alpha = 1
+//                    buttonSelesai.alpha = 1
                     case 2:
                         print("0")
-                    buttonSelesai.alpha = 1
+//                    buttonSelesai.alpha = 1
                     case 3:
                         c += 1
                         d += 1
-                    buttonSelesai.alpha = 1
+//                    buttonSelesai.alpha = 1
                     case 4:
                         c += 2
                         d += 2
                         print(a,b,c,d,e,f,g)
-                    buttonSelesai.alpha = 1
+//                    buttonSelesai.alpha = 1
                     default:
                         print("Erorr bro, ada yang salah pasti")
                         }
+                doNext()
             default:
                 print("Erorr bro, ada yang salah pasti")
                
@@ -307,7 +333,6 @@ class QuizViewController: UIViewController {
             updateUI()
             updateJawaban()
         }
-    
     
     //update soal
        func updateUI() {

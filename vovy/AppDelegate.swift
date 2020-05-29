@@ -12,11 +12,11 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-//    let notification = Notification.getInstance()
+    let notification = Notification.getInstance()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        notification.notificationConfig()
-//        notification.notificationCenter.delegate = notification
+        notification.notificationConfig()
+        notification.notificationCenter.delegate = notification
           return true
     }
     
@@ -26,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) {
       let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
       let token = tokenParts.joined()
-//      LocalStorage.saveDeviceToken(token)
+        print(tokenParts.joined())
+      LocalStorage.saveDeviceToken(token)
     }
 
     func application(

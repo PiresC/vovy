@@ -14,13 +14,27 @@ class HomePageViewController: UIViewController {
     let kategori = ["Sosialisasi", "Translator", "Teknologi", "Penulis", "Administrasi", "Desain", "Riset", "Manajemen", "Pelatihan"]
     var res: readJson?
     var urljson = URL(string: "https://mc2-be.herokuapp.com/activities")
-    var images: [UIImage]?
+    let imgDescDic:[String:String] = [
+        "Teknologi" : "Mengikuti perkembangan teknologi terkini",
+        "Riset" : "Senang mencari tahu sesuatu lebih dalam",
+        "Desain" : "Kreatif dan memiliki berbagai macam ide",
+        "Sosialisasi" : "Berbagi dengan cara berinteraksi sosial",
+        "Translator" : "Terampil dalam menggunakan bahasa lain",
+        "Penulis" : "Menulis adalah kegiatan yang anda senangi",
+        "Administrasi" : "Detail dan teliti dalam mengurus pembukuan",
+        "Manajemen" : "Mengorganisir jadwal dan kegiatan",
+        "Pelatihan" : "Membagikan ilmu kepada orang lain"
+    ]
 
+//    var images: [UIImage]?
+
+    @IBOutlet weak var imageBestCategory: UIImageView!
     @IBOutlet weak var KategoriCollectionView: UICollectionView!
     @IBOutlet weak var kegiatanCollectionView: UICollectionView!
     @IBOutlet weak var loadingImage: UIImageView!
     
-    
+    @IBOutlet weak var categoryTitle: UILabel!
+    @IBOutlet weak var categoryDesc: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollection()
@@ -29,18 +43,49 @@ class HomePageViewController: UIViewController {
         if LocalStorage.getQuizFlag() == false {
             performSegue(withIdentifier: "toOnBoarding", sender: nil)
         }
-        
+        navigationController?.setNavigationBarHidden(true, animated: false)
         loadingImage.loadGif(name: "loading")
         kegiatanCollectionView.isHidden = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        renderImage()
+        setCategoryText()
+    }
+    
+    private func setCategoryText() {
+        if let category = LocalStorage.getFirstCategory(){
+            categoryTitle.text = category
+            categoryDesc.text = imgDescDic[category]
+        }
+    }
+    
+    private func renderImage() {
+        let imgDic:[String:UIImage] = [
+            "Teknologi" : #imageLiteral(resourceName: "Tech"),
+            "Riset" : #imageLiteral(resourceName: "riset-1"),
+            "Desain" : #imageLiteral(resourceName: "Desain-2"),
+            "Sosialisasi" : #imageLiteral(resourceName: "sosial"),
+            "Translator" : #imageLiteral(resourceName: "Translator-1"),
+            "Penulis" : #imageLiteral(resourceName: "penulis-1"),
+            "Administrasi" : #imageLiteral(resourceName: "admin"),
+            "Manajemen" : #imageLiteral(resourceName: "managemen "),
+            "Pelatihan" : #imageLiteral(resourceName: "learning")
+        ]
+        
+        if let category = LocalStorage.getFirstCategory() {
+            imageBestCategory.image = imgDic[category]
+        }
     }
     
     func loadJson() {
         DispatchQueue.global().async {
             let dataTask = URLSession.shared.dataTask(with: self.urljson!) { data,_,_ in
-                    let jsonData = data
+                if let jsonData = data {
                     
                     do {
-                        self.res = try JSONDecoder().decode(readJson.self, from: jsonData!)
+                        self.res = try JSONDecoder().decode(readJson.self, from: jsonData)
                         DispatchQueue.main.async {
                             
                             self.kegiatanCollectionView.isHidden = false
@@ -50,6 +95,7 @@ class HomePageViewController: UIViewController {
                     } catch let error {
                         print(error)
                     }
+                }
             }
             dataTask.resume()
         }
@@ -79,6 +125,11 @@ class HomePageViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        if segue.identifier == "toProfile" {
+            navigationItem.title = "Kembali"
+        }
         if let destination = segue.destination as? detialKegiatanViewController{
             destination.volunteerData = sender as? dataStructure
         } else if let destination = segue.destination as? lihatSemuaKegiatanViewController {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2XZ-vF-MVW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2XZ-vF-MVW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -35,17 +35,12 @@
                                     <action selector="namaField:" destination="2XZ-vF-MVW" eventType="editingDidEnd" id="6qU-pX-DNH"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unV-Ny-jS3">
-                                <rect key="frame" x="339" y="56" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Skip"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltN-F9-5zW">
                                 <rect key="frame" x="48" y="752" width="317" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="button mainkan quiz"/>
                                 <connections>
-                                    <segue destination="lWL-EB-vt3" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="qjn-O0-IBU"/>
+                                    <action selector="validatingBeforeSegue:" destination="2XZ-vF-MVW" eventType="touchUpInside" id="M81-ZS-PQJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,6 +49,7 @@
                     </view>
                     <connections>
                         <outlet property="isiNama" destination="V30-4X-twO" id="CRK-8F-XbD"/>
+                        <segue destination="lWL-EB-vt3" kind="presentation" identifier="toQuiz" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="Hgu-zi-2i6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qn0-LR-2dS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

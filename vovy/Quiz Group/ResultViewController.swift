@@ -14,19 +14,40 @@ class ResultViewController: UIViewController {
        var isiSebelah2 = ""
        var isiSebelah3 = ""
     
-    @IBOutlet weak var labelBidang: UILabel!
+    let titleDic:[String:String] = [
+        "Teknologi" : "Pengembangan Teknologi",
+        "Riset" : "Riset",
+        "Desain" : "Desain" ,
+        "Sosialisasi" : "Sosialisasi & Media",
+        "Translator" : "Translator",
+        "Penulis" : "Penulis & Editor",
+        "Administrasi" : "Administrasi",
+        "Manajemen" : "Manajemen Proyek",
+        "Pelatihan" : "Pelatihan & Pengajaran"
+    ]
+    let descDic:[String:String] = [
+        "Teknologi" : "Anda memiliki pengetahuan luas mengenai perkemangan teknologi yang pesat saat ini",
+        "Riset" : "Mencari tahu lebih dalam mengenai sebuah hal dan  melakukan penelitian yang lebih dalam merupakan kegiatan  yang anda senangi",
+        "Desain" : "Dalam melakukan kegiatan relawan anda memiliki banyak ide dan senang membuat sesuatu menjadi lebih estetik" ,
+        "Sosialisasi" : "Berbagi dan membagikan cerita kepada orang lain merupakan sebuah hal yang tidak sulit untuk anda lakukan",
+        "Translator" : "Anda mampu untuk membantu orang lain menggunakan kemampuan  bahasa asing yang anda miliki",
+        "Penulis" : "Dalam kegiatan sukarelawan anda merasa senang membantu dalam bidang penulisan dan juga pengecekan naskah",
+        "Administrasi" : "Menyenangkan bagi anda untuk memperhatikan hal hal detail yang sering terlewatkan, serta merapikan berkas berkas yang penting",
+        "Manajemen" : "Anda dapat mengorganisir sebuah kegiatan dan melaksanakannya dengan sangat baik",
+        "Pelatihan" : "Berbagi dan menimba ilmu merupakan hal yang selalu anda lakukan. Mengajarkan hal baru kepada orang lain membuat anda bahagia"
+    ]
+
     
+    @IBOutlet weak var labelBidang: UILabel!
     @IBOutlet weak var imageHeader: UIImageView!
     @IBOutlet weak var recomendKiri: UIImageView!
     @IBOutlet weak var recomendKanan: UIImageView!
     
-     var gambar = [ #imageLiteral(resourceName: "sosialisai logo"),#imageLiteral(resourceName: "desain logo"),#imageLiteral(resourceName: "riset logo"),#imageLiteral(resourceName: "translator logo"),#imageLiteral(resourceName: "manajemen logo"),#imageLiteral(resourceName: "penulis logo"),#imageLiteral(resourceName: "tech logo"),#imageLiteral(resourceName: "admin logo"),#imageLiteral(resourceName: "pelatihan logo")]
+    @IBOutlet weak var descLabel: UILabel!
+    var gambar = [ #imageLiteral(resourceName: "sosialisai logo"),#imageLiteral(resourceName: "desain logo"),#imageLiteral(resourceName: "riset logo"),#imageLiteral(resourceName: "translator logo"),#imageLiteral(resourceName: "manajemen logo"),#imageLiteral(resourceName: "penulis logo"),#imageLiteral(resourceName: "tech logo"),#imageLiteral(resourceName: "admin logo"),#imageLiteral(resourceName: "pelatihan logo")]
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            
-            let convert = QuizCategoryConversion.init([isiSebelah, isiSebelah2, isiSebelah3])
-            print(convert.getCategoryArray())
             switch isiSebelah {
                 
     //1
@@ -122,7 +143,7 @@ class ResultViewController: UIViewController {
     //2
             case "Investigate":
                 labelBidang.text = "Riset"
-                imageHeader.image = #imageLiteral(resourceName: "Riset")
+                imageHeader.image = #imageLiteral(resourceName: "Risetakhirw")
                 
                 switch isiSebelah2 {
                 case "Realistic":
@@ -213,7 +234,7 @@ class ResultViewController: UIViewController {
             case "Artistic":
                 let Art = ["Penulis & Editor" , "Desain" , "Translator"]
                 labelBidang.text = Art[0]
-                imageHeader.image = #imageLiteral(resourceName: "pengjaran")
+                imageHeader.image = #imageLiteral(resourceName: "Gambar Penulis")
                 recomendKiri.image = #imageLiteral(resourceName: "desain logo") // desain
                 recomendKanan.image = #imageLiteral(resourceName: "translator logo") // Translator
                 
@@ -423,21 +444,28 @@ class ResultViewController: UIViewController {
             default:
                 print("Erorr bro, ada yang salah pasti")
             }
+            initDesc()
             
         }
+    
+    private func initDesc() {
+        let categories = QuizCategoryConversion.init([isiSebelah,isiSebelah2,isiSebelah3]).getCategoryArray()
+        
+        descLabel.text = descDic[categories[0]]
+    }
         
     @IBAction func gotoHome(_ sender: Any) {
         LocalStorage.setQuizFlag(true)
+        let convert = QuizCategoryConversion.init([isiSebelah, isiSebelah2, isiSebelah3])
+        LocalStorage.saveCategory(convert.getCategoryArray())
         restartApplication()
-        
     }
     
     func restartApplication () {
         self.dismiss(animated: true, completion: {});
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
-    
-
+   
     
 
 }

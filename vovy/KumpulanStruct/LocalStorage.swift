@@ -7,18 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 class LocalStorage {
     static let defaults = UserDefaults.standard
-    static let BASE_API = "http://localhost:3000/users/"
+    static let BASE_API = "https://mc2-be.herokuapp.com/users/"
     
     enum State {
         case create
         case update
     }
     
-    
-    static func getCategory() -> Array<String>{
+    static func getCategories() -> Array<String>{
         var category:Array<String> = []
         if let  category1 = defaults.string(forKey: "category1"){
             category.append(category1)
@@ -31,23 +31,49 @@ class LocalStorage {
         }
         return category
     }
+    
+    static func getFirstCategory()-> String? {
+        return defaults.string(forKey: "category1") 
+    }
+    
     static func getName() -> String {
         if let name = defaults.string(forKey: "name") {
             return name
         }
-        return ""
+        return "nama"
     }
+    
+    static func getProfileImage() -> UIImage  {
+        if let imageData = defaults.data(forKey: "image"),
+            let image = UIImage(data: imageData) {
+            print(imageData)
+            print(image)
+            return image
+        }
+        return #imageLiteral(resourceName: "profileicon")
+    }
+    
+    static func getDescription() -> String {
+        if let desc = defaults.string(forKey: "desc") {
+            return desc
+        }
+        return "Deskripsi diri anda"
+    }
+    
     static func getDeviceToken() -> String {
         if let deviceId = defaults.string(forKey: "deviceId") {
             return deviceId
         }
         return ""
     }
+    
     static func getUUID() -> String {
         if let uuid = defaults.string(forKey: "uuid") {
             return uuid
+        } else {
+            defaults.set(NSUUID().uuidString, forKey: "uuid")
         }
-        return ""
+        return getUUID()
     }
     
     static func getQuizFlag() -> Bool {
@@ -61,9 +87,8 @@ class LocalStorage {
     
     static func postData(state:State) {
         let uuid = getUUID()
-        let session = URLSession.shared
-        var url:URL?
-        
+        print(uuid)
+        var url:URL!
         switch state {
             case .create:
                  url = URL(string: BASE_API)
@@ -71,36 +96,42 @@ class LocalStorage {
                  url = URL(string: "\(BASE_API)\(uuid)")
         }
         
-        var request = URLRequest(url: url!)
+        var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Powered by Swift!", forHTTPHeaderField: "X-Powered-By")
-        let json = [
-            "category": getCategory(),
-            "name": getName(),
-            "deviceId": getDeviceToken(),
-            "uuid": getUUID()
-        ] as [String : Any]
-        let jsonData = try! JSONSerialization.data(withJSONObject: json, options: [])
-        print(jsonData)
-        let task = session.uploadTask(with: request, from: jsonData) { data, response, error in
-            if let httpResponse = response as? HTTPURLResponse {
-                print(httpResponse.statusCode)
-            }
+        
+        let payload = payloadStringBuilder().data(using: .utf8)!
+        let task = URLSession.shared.uploadTask(with: request, from: payload) { data, response, error in
+            print(String(data: data!, encoding: .utf8) ?? "cant compare")
         }
-
         task.resume()
     }
     
-    static func saveCategory(_ category1:String, _ category2:String?, _ category3:String?) {
-        defaults.set(category1, forKey: "category1")
-        if let category = category2 {
-            defaults.set(category, forKey: "category2")
+    private static func payloadStringBuilder() -> String{
+        var baseParams = "uuid=\(getUUID())&deviceId=\(getDeviceToken())&name=\(getName())"
+        let category = QuizCategoryConversion.getBEFormatCategory(getCategories())
+        
+        print(baseParams)
+        if(category.count > 0){
+            for i in 0...(category.count-1) {
+                baseParams += "&category[\(i)]=\(category[i])"
+            }
         }
-        if let category = category2 {
-            defaults.set(category, forKey: "category3")
+        return baseParams
+    }
+    
+    static func saveCategory(_ categories:Array<String>) {
+        resetCategories()
+        if categories.count > 0 {
+            for i in 0...(categories.count-1) {
+                print("category\(i+1)")
+                defaults.set(categories[i], forKey: "category\(i+1)")
+            }
         }
         postData(state: .update)
+    }
+    
+    static func saveProfileImage(_ image:UIImage) {
+        defaults.set(image.pngData(),forKey: "image")
     }
     
     static func saveName(_ name:String) {
@@ -108,16 +139,40 @@ class LocalStorage {
         postData(state: .update)
     }
     
-    static func saveDeviceToken(_ token:String) {
-            defaults.set(token, forKey: "deviceId")
-            saveUUID()
-            postData(state: .create)
+    static func bulkSave(name:String, desc:String, categories:Array<String>, image:UIImage) {
+        resetCategories()
+        defaults.set(name,forKey: "name")
+        defaults.set(desc,forKey: "desc")
+        if categories.count > 0 {
+            for i in 0...(categories.count-1) {
+                print("\(categories[i]) ke\(i) with key \("category\(i+1)")")
+                defaults.set(categories[i], forKey: "category\(i+1)")
+            }
+        }
+        defaults.set(image.pngData(),forKey: "image")
+        postData(state: .update)
     }
-    static func saveUUID() {
-        if let uuid = defaults.string(forKey: "uuid") {
-            print(uuid)
+    
+    private static func resetCategories() {
+        var i = 1;
+        while(defaults.string(forKey: "category\(i)") != nil) {
+            defaults.removeObject(forKey: "category\(i)")
+            i+=1
+        }
+    }
+    
+    static func saveDescription(_ desc:String){
+        defaults.set(desc,forKey: "desc")
+    }
+    
+    static func saveDeviceToken(_ token:String) {
+        defaults.set(token, forKey: "deviceId")
+        print(token+" sosial pliss")
+        if defaults.string(forKey: "deviceId") != nil {
+            postData(state: .update)
         } else {
-            defaults.set(NSUUID().uuidString, forKey: "uuid")
+            postData(state: .create)
         }
     }
 }
+

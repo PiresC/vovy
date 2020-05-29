@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Bf-KC-Zrg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Bf-KC-Zrg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="48" y="275" width="318" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Button" backgroundImage="BOX BIRU">
+                                <state key="normal" title="    Button" backgroundImage="BOX BIRU">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -30,7 +30,7 @@
                                 <rect key="frame" x="48" y="349" width="318" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Button" backgroundImage="BOX BIRU">
+                                <state key="normal" title="    Button" backgroundImage="BOX BIRU">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -41,7 +41,7 @@
                                 <rect key="frame" x="48" y="420" width="318" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Button" backgroundImage="BOX BIRU">
+                                <state key="normal" title="    Button" backgroundImage="BOX BIRU">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -52,7 +52,7 @@
                                 <rect key="frame" x="48" y="484" width="318" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Button" backgroundImage="BOX BIRU">
+                                <state key="normal" title="    Button" backgroundImage="BOX BIRU">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -63,7 +63,7 @@
                                 <rect key="frame" x="48" y="554" width="318" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Button" backgroundImage="BOX BIRU">
+                                <state key="normal" title="    Button" backgroundImage="BOX BIRU">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -76,7 +76,6 @@
                                 <state key="normal" backgroundImage="lanjutkan"/>
                                 <connections>
                                     <action selector="buttonLanjut:" destination="1Bf-KC-Zrg" eventType="touchUpInside" id="aZI-OH-Ly2"/>
-                                    <segue destination="qgb-m1-kWl" kind="presentation" modalPresentationStyle="currentContext" id="dLY-Rk-Fqw"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gzj-Yy-Atq">
@@ -119,6 +118,7 @@
                         <outlet property="jawabanTiga" destination="foD-z2-jFy" id="NXj-cA-2Uj"/>
                         <outlet property="progresBar" destination="Gzj-Yy-Atq" id="6Yd-G0-tg0"/>
                         <outlet property="soalLabel" destination="iVy-aB-dab" id="vJI-sR-G8U"/>
+                        <segue destination="qgb-m1-kWl" kind="presentation" identifier="toResult" modalPresentationStyle="currentContext" id="zAV-IQ-xPE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXg-Zr-D7K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -203,15 +203,16 @@ dan juga pengecekan naskah </string>
                     </view>
                     <navigationItem key="navigationItem" id="uba-rW-GZG"/>
                     <connections>
+                        <outlet property="descLabel" destination="ICh-ek-00S" id="JTU-r0-4El"/>
                         <outlet property="imageHeader" destination="92z-ei-9SN" id="DGa-iY-rfV"/>
-                        <outlet property="labelBidang" destination="RgW-Gr-96r" id="yIq-t4-cL1"/>
+                        <outlet property="labelBidang" destination="RgW-Gr-96r" id="mSz-Xn-nH3"/>
                         <outlet property="recomendKanan" destination="twT-i5-3tY" id="ROf-Xh-Cgu"/>
                         <outlet property="recomendKiri" destination="tm9-Lx-xwk" id="yOg-nt-Rz0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yo1-5J-n4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="723" y="-56"/>
+            <point key="canvasLocation" x="721.73913043478262" y="-56.25"/>
         </scene>
     </scenes>
     <resources>

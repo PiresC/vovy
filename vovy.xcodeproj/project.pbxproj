@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42606DAF247F4865004E7822 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 42606DAE247F4865004E7822 /* loading.gif */; };
+		421B9BED2480A21A000F376C /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 421B9BEC2480A21A000F376C /* loading.gif */; };
 		42606DB1247F49E4004E7822 /* QuizCategoryConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42606DB0247F49E4004E7822 /* QuizCategoryConversion.swift */; };
 		8618EE46247E4D650097EEA2 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8618EE45247E4D650097EEA2 /* LocalStorage.swift */; };
 		8618EE48247E4D990097EEA2 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8618EE47247E4D990097EEA2 /* Notification.swift */; };
@@ -48,7 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		42606DAE247F4865004E7822 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../Desktop/loading.gif; sourceTree = "<group>"; };
+		421B9BEC2480A21A000F376C /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		42606DB0247F49E4004E7822 /* QuizCategoryConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCategoryConversion.swift; sourceTree = "<group>"; };
 		8618EE45247E4D650097EEA2 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		8618EE47247E4D990097EEA2 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -192,9 +192,9 @@
 				9AD4504B247D5CE400087DC7 /* Awal Group */,
 				86F4820F24655E7A00F1B848 /* LaunchScreen.storyboard */,
 				86F4821224655E7A00F1B848 /* Info.plist */,
+				421B9BEC2480A21A000F376C /* loading.gif */,
 				86F4820A24655E7900F1B848 /* vovy.xcdatamodeld */,
 				86853A3F247E396D009C6DB2 /* Main.storyboard */,
-				42606DAE247F4865004E7822 /* loading.gif */,
 			);
 			path = vovy;
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 				9AE3CCD024762CF300E9386E /* QuizStoryboard.storyboard in Resources */,
 				86853A40247E396D009C6DB2 /* Main.storyboard in Resources */,
 				86B14013247C074300512B51 /* lihatSemuaKegiatanCell.xib in Resources */,
-				42606DAF247F4865004E7822 /* loading.gif in Resources */,
+				421B9BED2480A21A000F376C /* loading.gif in Resources */,
 				867D4B28247520030064D0B8 /* ProfileView.storyboard in Resources */,
 				86B14001247BEE7900512B51 /* lihatSemuaKategori.storyboard in Resources */,
 			);

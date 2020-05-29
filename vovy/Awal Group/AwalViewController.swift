@@ -27,6 +27,21 @@ class AwalViewController: UIViewController {
         nama = sender.text!
     }
     
+    @IBAction func validatingBeforeSegue(_ sender: Any) {
+        nama = isiNama.text!
+        if nama.count < 3 {
+            alertMinimalCharaNotExceed()
+        } else {
+            LocalStorage.saveName(nama)
+            performSegue(withIdentifier: "toQuiz", sender: "")
+        }
+    }
+    
+    private func alertMinimalCharaNotExceed() {
+        let alert = UIAlertController(title: "Masukan nama anda", message: "Masukan nama anda di kolom yang telah disediakan", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "tutup", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
     
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.

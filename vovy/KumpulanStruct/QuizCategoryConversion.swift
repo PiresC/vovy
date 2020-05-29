@@ -51,11 +51,12 @@ class QuizCategoryConversion {
     }
     
     private func convertQuizToCategory() {
+        if quizResultArray.count > 2 {
          switch quizResultArray[0] {
                    
        //1
                case quizArray[0]:
-                   category1 = "Pengembang Teknologi"
+                   category1 = "Teknologi"
                    switch quizResultArray[1] {
                    case quizArray[1]:
                        category2 = categoryArray[1]
@@ -437,32 +438,45 @@ class QuizCategoryConversion {
                default:
                    print("Erorr bro, ada yang salah pasti")
                }
-
+        }
     }
     
-    func getBEFormatCategory() -> Array<String> {
-        if category1 != nil && category2 != nil && category3 != nil{
-            return [ categoryToBEcategoryConversion(category1!),
-                     categoryToBEcategoryConversion(category2!),
-                     categoryToBEcategoryConversion(category3!)]
-        }
-        return []
+    static func getBEFormatCategory(_ categories:Array<String>) -> Array<String> {
+        return categories.map({ category in
+            return categoryToBEcategoryConversion(category)
+        })
     }
     
-    func categoryToBEcategoryConversion(_ category:String) -> String {
-        switch category {
-        case categoryArray[3]: return "SOCIALISASI"
-        case categoryArray[4]: return "TRANSLATOR"
-        case categoryArray[0]: return "TEKNOLOGI"
-        case categoryArray[5]: return "PENULIS"
-        case categoryArray[6]: return "ADMINISTRASI"
-        case categoryArray[2]: return "DESAIN"
-        case categoryArray[1]: return "RISET"
-        case categoryArray[7]: return "MANAJEMEN"
-        case categoryArray[8]: return "PELATIHAN"
-        default:
-            return "undefined"
+    
+    static func categoryToBEcategoryConversion(_ category:String) -> String {
+        let categories = ["Teknologi", "Riset", "Desain", "Sosialisasi", "Translator", "Penulis", "Administrasi",  "Manajemen", "Pelatihan"]
+           switch category {
+           case categories[3]: return "SOCIALISASI"
+           case categories[4]: return "TRANSLATOR"
+           case categories[0]: return "TEKNOLOGI"
+           case categories[5]: return "PENULIS"
+           case categories[6]: return "ADMINISTRASI"
+           case categories[2]: return "DESAIN"
+           case categories[1]: return "RISET"
+           case categories[7]: return "MANAJEMEN"
+           case categories[8]: return "PELATIHAN"
+           default:
+               return "undefined"
+           }
+       }
+    
+    static func isBEFormat(_ categories:Array<String>) -> Bool {
+        let BEFormat = [ "SOCIALISASI","TRANSLATOR", "TEKNOLOGI", "PENULIS", "ADMINISTRASI", "DESAIN", "RISET","MANAJEMEN", "PELATIHAN"]
+        for category in categories {
+            for format in BEFormat {
+                if category == format {
+                    break;
+                } else if format == "PELATIHAN" {
+                    return false
+                }
+            }
         }
+        return true
     }
     
 }
