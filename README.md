@@ -8,7 +8,9 @@ the app that focus on helping during pandemic/COVID-19, the app features a set o
 * Notification = Get new notification , when there is new volunteering activities that match with your profile.
 
 ## Screenshot
-![](https://github.com/PiresC/vovy/blob/master/Screen%20Shot%202021-05-07%20at%2020.52.38478.png)
+![Assesment](https://github.com/PiresC/vovy/blob/master/Screenshot/Assesment.gif)
+![User Flow](https://github.com/PiresC/vovy/blob/master/Screenshot/User%20Flow%20s.gif)
+![](https://github.com/PiresC/vovy/blob/master/Screenshot/Screenshot.png)
 
 ## Built With
 * [Swift in Xcode](https://developer.apple.com/xcode/) - IDE
