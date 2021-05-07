@@ -7,9 +7,14 @@ the app that focus on helping during pandemic/COVID-19, the app features a set o
 * Recommended Activities = app shows recommended activities by reputable organisations  based on his/her preferences.
 * Notification = Get new notification , when there is new volunteering activities that match with your profile.
 
-## Screenshot
-![Assesment](https://github.com/PiresC/vovy/blob/master/Screenshot/Assesment.gif)
-![User Flow](https://github.com/PiresC/vovy/blob/master/Screenshot/User%20Flow%20s.gif)
+## Assesment
+
+<img title="Assesment" src="https://github.com/PiresC/vovy/blob/master/Screenshot/Assesment.gif" width="400"> 
+
+## User Flow
+<img src="https://github.com/PiresC/vovy/blob/master/Screenshot/User%20Flow%20s.gif" width="400">
+
+## App Screenshot & Hi-Fi Design
 ![](https://github.com/PiresC/vovy/blob/master/Screenshot/Screenshot.png)
 
 ## Built With
