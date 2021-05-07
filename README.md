@@ -7,7 +7,7 @@ the app that focus on helping during pandemic/COVID-19, the app features a set o
 * Recommended Activities = app shows recommended activities by reputable organisations  based on his/her preferences.
 * Notification = Get new notification , when there is new volunteering activities that match with your profile.
 
-## Assesment
+## Assessment
 
 <img title="Assesment" src="https://github.com/PiresC/vovy/blob/master/Screenshot/Assesment.gif" width="400"> 
 
